@@ -13,13 +13,23 @@ background(0,100,200);
 }
 
 function draw() {
-	frameRate(23);
+	frameRate(10);
 	rojo=random(0,255);
 	verde=random(0,255);
 	azul=random(0,255);
 	
-fill(0,0,0);
-triangle(200,200,400,200,500,300);
+	if(mouseIsPressed == true){
+		rojo=0;
+		verde=0;
+		azul=0;
+	}
+	else{
+		rojo=random(0,255);
+		verde=random(0,255);
+		azul=random(0,255);
+	
+	}
+background(1,1,1);
   fill(255,255,255);
   ellipse(mouseX,mouseY,500,300);
     fill(rojo,verde,azul,250);
@@ -29,8 +39,6 @@ triangle(200,200,400,200,500,300);
 //  x=x+2;
   fill(0,0,0); //negro
   ellipse(mouseX,mouseY,100,100);
-	
-  fill(0,0,0);
-  ellipse(mouseX,mouseY,100,100);
+
 
 }
